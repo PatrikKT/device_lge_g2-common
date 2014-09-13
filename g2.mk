@@ -60,6 +60,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/touch_dev.idc:system/usr/idc/touch_dev.idc
 
+# MultiROM & TWRP
+PRODUCT_COPY_FILES += \
+ $(LOCAL_PATH)/twrp/twrp.fstab:recovery/root/etc/twrp.fstab \
+ $(LOCAL_PATH)/twrp/init.recovery.g2.rc:recovery/root/init.recovery.g2.rc \
+ $(LOCAL_PATH)/twrp/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
+
+PRODUCT_PACKAGES+= \
+	mr_unloki.sh \
+	mr_loki.sh \
+	loki_tool \
+	unpackbootimg \
+	mkbootimg
+
 # Prepatch to fix BT/WiFi bus lockups
 PRODUCT_COPY_FILES += device/lge/g2-common/bluetooth/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
 
