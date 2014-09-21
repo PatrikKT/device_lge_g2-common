@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-if [ "$1" = "/dev/block/mmcblk0p7" ]; then
+if [ "$1" = "/dev/block/platform/msm_sdcc.1/by-name/boot" ]; then
 	echo "Unloking internal boot.img"
 	dd if=/dev/block/platform/msm_sdcc.1/by-name/boot of=/tmp/boot.img
 	if [ -e /tmp/boot.img ]; then
