@@ -69,9 +69,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES+= \
 	mr_unloki.sh \
 	mr_loki.sh \
-	loki_tool \
-	unpackbootimg \
-	mkbootimg
+	loki_tool 
 
 # Prepatch to fix BT/WiFi bus lockups
 PRODUCT_COPY_FILES += device/lge/g2-common/bluetooth/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
