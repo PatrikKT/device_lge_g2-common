@@ -66,11 +66,6 @@ PRODUCT_COPY_FILES += \
  $(LOCAL_PATH)/twrp/init.recovery.g2.rc:recovery/root/init.recovery.g2.rc \
  $(LOCAL_PATH)/twrp/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
 
-PRODUCT_PACKAGES+= \
-	mr_unloki.sh \
-	mr_loki.sh \
-	loki_tool 
-
 # Prepatch to fix BT/WiFi bus lockups
 PRODUCT_COPY_FILES += device/lge/g2-common/bluetooth/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
 
